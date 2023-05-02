@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>меню</title>
+</head>
+<body>
+<h1>Результат тестового задания</h1>
+
+
+<style>
+a, a:visited  {
+  text-decoration: none;
+  color: blue;
+}
+
+
+ul.menu > a {
+    color: blue;
+}
+
+ul.menu, ul.submenu {
+  list-style-type: none;
+}
+.submenu li > a {
+  color: gray;
+}
+li.active > a {
+  font-weight: bold;
+  color: blue;
+}
+li.active > ul li a {
+  color: red;
+}
+</style>
+
+
+
+{% load app_menu_tags %}
+{% draw_menu 'main_menu' %}
+{% draw_menu 'main_menu2' %}
+
+
+<script>
+
+</script>
+</body>
+</html>
